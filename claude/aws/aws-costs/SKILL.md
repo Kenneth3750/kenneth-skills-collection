@@ -12,15 +12,15 @@ Calculate AWS costs for the last `$ARGUMENTS` days.
 ## Main Command
 
 ```bash
-python ${SKILL_DIR}/scripts/calculate-costs.py $ARGUMENTS
+python ${CLAUDE_SKILL_DIR}/scripts/calculate-costs.py $ARGUMENTS
 ```
 
 **Examples:**
 ```bash
-python ${SKILL_DIR}/scripts/calculate-costs.py 7         # Last 7 days
-python ${SKILL_DIR}/scripts/calculate-costs.py 30        # Last 30 days
-python ${SKILL_DIR}/scripts/calculate-costs.py 7 --daily # With daily breakdown
-python ${SKILL_DIR}/scripts/calculate-costs.py 30 --budget 10.0  # Custom budget alert
+python ${CLAUDE_SKILL_DIR}/scripts/calculate-costs.py 7         # Last 7 days
+python ${CLAUDE_SKILL_DIR}/scripts/calculate-costs.py 30        # Last 30 days
+python ${CLAUDE_SKILL_DIR}/scripts/calculate-costs.py 7 --daily # With daily breakdown
+python ${CLAUDE_SKILL_DIR}/scripts/calculate-costs.py 30 --budget 10.0  # Custom budget alert
 ```
 
 ## What It Shows
