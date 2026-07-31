@@ -139,14 +139,16 @@ If your skill includes scripts (Python, Bash, etc.):
        └── my-script.py
    ```
 
-2. **Reference scripts in SKILL.md using `${CLAUDE_SKILL_DIR}`:**
+2. **Reference scripts in SKILL.md using `${SKILL_DIR}`:**
    ```markdown
    ## Usage
    
    ```bash
-   python ${CLAUDE_SKILL_DIR}/scripts/my-script.py $ARGUMENTS
+   python ${SKILL_DIR}/scripts/my-script.py $ARGUMENTS
    ```
    ```
+   
+   `${SKILL_DIR}` is a generic placeholder that both platforms interpret as the skill's directory. This ensures the script path works regardless of where the skill is installed.
 
 3. **Keep scripts neutral:**
    - No hardcoded paths specific to your machine
