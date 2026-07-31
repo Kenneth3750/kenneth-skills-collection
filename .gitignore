@@ -1,0 +1,7 @@
+AGENTS.md
+node_modules/
+.DS_Store
+*.log
+.env
+.env.*
+todo.md

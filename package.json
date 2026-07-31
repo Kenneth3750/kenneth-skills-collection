@@ -1,0 +1,40 @@
+{
+  "name": "kenneth-skills-collection",
+  "version": "1.0.0",
+  "description": "A curated collection of reusable agent skills for OpenCode and Claude Code. Covers ElevenLabs, OpenAI, AWS, multi-agent systems, and framework sync utilities.",
+  "main": "index.js",
+  "bin": {
+    "kenneth-skills": "./index.js"
+  },
+  "scripts": {
+    "install:opencode": "bash scripts/install-opencode.sh",
+    "install:claude": "bash scripts/install-claude.sh",
+    "install:all": "bash scripts/install-opencode.sh && bash scripts/install-claude.sh",
+    "sync": "bash scripts/sync-skills.sh"
+  },
+  "files": [
+    ".opencode/skills/",
+    ".claude/skills/",
+    "scripts/",
+    "index.js",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenneth3750/kenneth-skills-collection.git"
+  },
+  "keywords": [
+    "opencode",
+    "claude-code",
+    "skills",
+    "agent-skills",
+    "ai",
+    "elevenlabs",
+    "openai",
+    "aws",
+    "multi-agent",
+    "sync"
+  ],
+  "author": "Kenneth3750",
+  "license": "MIT"
+}
