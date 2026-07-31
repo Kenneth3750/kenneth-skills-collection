@@ -61,6 +61,18 @@ If your skill doesn't fit an existing category, create a new one.
 
 ### Step 2: Create the Skill Files
 
+**Directory structure:**
+
+```
+[skill-name]/
+├── SKILL.md              # Required: skill instructions
+└── scripts/              # Optional: if the skill references scripts
+    ├── calculate-costs.py
+    └── other-script.sh
+```
+
+**Important:** If your skill includes scripts, they MUST go in a `scripts/` subdirectory. Never place scripts at the same level as SKILL.md.
+
 **Claude Code format** (`claude/[category]/[skill-name]/SKILL.md`):
 
 ```yaml
@@ -114,6 +126,35 @@ Use a descriptive commit message: `feat(category): add skill-name skill`
 - 1-64 characters
 - Must match the folder name
 - Must be descriptive: `aws-costs` not `costs`
+
+## Scripts in Skills
+
+If your skill includes scripts (Python, Bash, etc.):
+
+1. **Always place scripts in a `scripts/` subdirectory:**
+   ```
+   my-skill/
+   ├── SKILL.md
+   └── scripts/
+       └── my-script.py
+   ```
+
+2. **Reference scripts in SKILL.md using `${CLAUDE_SKILL_DIR}`:**
+   ```markdown
+   ## Usage
+   
+   ```bash
+   python ${CLAUDE_SKILL_DIR}/scripts/my-script.py $ARGUMENTS
+   ```
+   ```
+
+3. **Keep scripts neutral:**
+   - No hardcoded paths specific to your machine
+   - No project-specific names or IDs
+   - Use environment variables for credentials
+   - Search for `.env` file dynamically (go up directory tree)
+
+4. **The installation scripts will automatically copy the `scripts/` directory** when users install your skill.
 
 ## Examples
 
