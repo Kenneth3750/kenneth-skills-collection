@@ -48,16 +48,16 @@ if [ -z "$FILTER" ]; then
             install_skill "$skill" || true
         done
     done
+elif [ -f "$SOURCE_DIR/$FILTER/SKILL.md" ]; then
+    # Install specific skill
+    echo "Installing skill: $FILTER"
+    install_skill "$SOURCE_DIR/$FILTER"
 elif [ -d "$SOURCE_DIR/$FILTER" ]; then
     # Install category
     echo "Installing category: $FILTER"
     for skill in "$SOURCE_DIR/$FILTER"/*/; do
         install_skill "$skill" || true
     done
-elif [ -d "$SOURCE_DIR/$(dirname "$FILTER")/$(basename "$FILTER")" ]; then
-    # Install specific skill
-    echo "Installing skill: $FILTER"
-    install_skill "$SOURCE_DIR/$FILTER"
 else
     echo "Error: '$FILTER' not found in opencode/"
     echo ""

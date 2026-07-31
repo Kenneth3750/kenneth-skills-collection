@@ -201,7 +201,7 @@ description: Calculate AWS costs for the my-project project.
 
 Deploy changes to the my-project Lambda function.
 cd "C:\Users\john\my-project" && sam deploy
-The stack name is my-project-voice-agent.
+The stack name is my-project-stack.
 Budget is $5/month.
 ```
 

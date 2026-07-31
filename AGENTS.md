@@ -110,7 +110,7 @@ This is the most important rule. A skill must work in **any** project, not just 
 # Deploy to AWS
 Deploy changes to the my-project Lambda function.
 cd "C:\Users\john\my-project" && sam deploy
-The stack name is my-project-voice-agent.
+The stack name is my-project-stack.
 ```
 
 **Generic (good):**
