@@ -12,14 +12,14 @@ Calculate ElevenLabs conversation costs for the last `$ARGUMENTS` days.
 ## Recommended Method: Use the Script
 
 ```bash
-python scripts/calculate-elevenlabs-costs.py $ARGUMENTS
+python ${CLAUDE_SKILL_DIR}/calculate-costs.py $ARGUMENTS
 ```
 
 **Examples:**
 ```bash
-python scripts/calculate-elevenlabs-costs.py 7              # Last 7 days
-python scripts/calculate-elevenlabs-costs.py 30 --detail    # With per-conversation detail
-python scripts/calculate-elevenlabs-costs.py 7 --agent agent_XXX  # Single agent only
+python ${CLAUDE_SKILL_DIR}/calculate-costs.py 7              # Last 7 days
+python ${CLAUDE_SKILL_DIR}/calculate-costs.py 30 --detail    # With per-conversation detail
+python ${CLAUDE_SKILL_DIR}/calculate-costs.py 7 --agent agent_XXX  # Single agent only
 ```
 
 ## Manual Process (if script fails)

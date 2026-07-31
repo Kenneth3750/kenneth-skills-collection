@@ -24,6 +24,15 @@ install_skill() {
         mkdir -p "$target"
         cp "$skill_path/SKILL.md" "$target/SKILL.md"
         echo "  ✓ Installed: $skill_name"
+        
+        # Copy any additional files (scripts, etc.) in the skill directory
+        for file in "$skill_path"/*; do
+            if [ -f "$file" ] && [ "$(basename "$file")" != "SKILL.md" ]; then
+                cp "$file" "$target/"
+                echo "    ✓ Copied: $(basename "$file")"
+            fi
+        done
+        
         return 0
     fi
     return 1
